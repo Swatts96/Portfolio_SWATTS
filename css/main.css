@@ -12,7 +12,7 @@ html[data-theme='light'] {
     .nav-container {
         position: relative;
         background-color: rgb(207,134,0);
-       width: 135px;
+        width: 135px;
         height: 600px;
         justify-content: space-evenly;
         align-items: normal;
@@ -28,10 +28,13 @@ html[data-theme='dark'] {
     --link-color: rgb(207,134,0);
 
     .nav-container {
-        position: relative;
+        position: fixed;
+        top: 150;
+        left: 0;
+        width: 135px;
+        height: 400px;
+        z-index: 1000; /* Set a higher z-index to ensure it's above other content */
         background-color: rgb(207,134,0);
-       width: 135px;
-        height: 600px;
         justify-content: space-evenly;
         align-items: normal;
         background-color: var(--background-color);
@@ -43,24 +46,37 @@ body {
     font-family: 'Trebuchet MS', sans-serif;
     background: var(--background-color);
     color: var(--text-color);
-    padding: 2%;
+    padding: 150px;
+    width: 1300px
+}
+.pageHeader {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Set a higher z-index to ensure it's above other content */
+}
+.theme-toggle-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Set a higher z-index to ensure it's above other content */
 }
 
-.theme-icon .d-block-dark,
-.theme-icon .d-block-light {
-    display: none;
-}
 #theme-toggle {
-    margin-left: auto; /* Push the button to the right side of the nav-container */
+    /* Your button styles */
+    justify-content: center;
 }
-[data-theme='dark'] .theme-icon .d-block-dark,
-[data-theme='light'] .theme-icon .d-block-light {
+
+[data-theme='dark'] .theme-icon,
+[data-theme='light'] .theme-icon{
     display: block;
 }
 
 .mainHeader1 {
+    text-decoration-line: underline;
+    align-items: normal;
     font-size: 24px;
-    padding-left: 20%;
+    padding-left: 12px ;
 }
 
 .mainHeader2 {
@@ -72,18 +88,18 @@ body {
 }
 
 .nav-bar-list {
-    align-items: normal;
+    justify-content: left;
 }
 
 .nav-link {
-    text-decoration: none;
+ 
     color: var(--text-color);
-    padding: 10px;
+
 }
 
 .nav-link:hover {
     background-color: var(--link-color);
-    color: #fff;
+    color: #ffffffab;
 }
 
 /* Media Queries for responsiveness */
@@ -107,4 +123,22 @@ body {
     .menu:hover .menu-dropdown {
         display: block;
     }
+}
+
+/* ... DISPLAY BOTH ICONS SEPERATLEY ... */
+
+#light-icon {
+    display: inline;
+}
+
+#dark-icon {
+    display: none;
+}
+
+[data-theme='dark'] #light-icon {
+    display: none;
+}
+
+[data-theme='dark'] #dark-icon {
+    display: inline;
 }
