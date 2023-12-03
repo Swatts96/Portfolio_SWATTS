@@ -5,23 +5,40 @@
 }
 
 html[data-theme='light'] {
-    --background-color: #fff;
+    --background-color: rgb(220,221,186);
     --text-color: #121416d8;
     --link-color: #543fd7;
+
+    .nav-container {
+        display: flex;
+        background-color: rgb(207,134,0);
+        width: 50%;
+        height: 25%;
+        justify-content:space-evenly;
+        align-items: normal;
+        background-color: var(--background-color);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
 }
 
 html[data-theme='dark'] {
     --background-color: rgb(59,94,78);
     --text-color: #F7F8F8;
     --link-color: #828fff;
-}
 
-.theme-toggle-container {
-    position:absolute;
-    top: 12px;
-    right: 25px;
-}
 
+    .nav-container {
+        display: flex;
+        background-color: rgb(207,134,0);
+        width: 50%;
+        height: 25%;
+        justify-content:space-evenly;
+        align-items: normal;
+        background-color: var(--background-color);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+}
 
 
 body {
@@ -33,25 +50,26 @@ body {
 }
 
 /* ... Your existing styles ... */
-
-#theme-toggle .d-block-dark,
-#theme-toggle .d-block-light {
+.theme-icon .d-block-dark,
+.theme-icon .d-block-light {
     display: none;
 }
 
-[data-theme='dark'] #theme-toggle .d-block-dark {
+
+.theme-toggle-container {
+    position:absolute;
+    top: 12px;
+    right: 25px;
+}
+
+
+[data-theme='dark'] .theme-icon .d-block-dark {
     display: block;
 }
 
-[data-theme='light'] #theme-toggle .d-block-light {
+[data-theme='light'] .theme-icon .d-block-light {
     display: block;
 }
-
-/* ... Your existing styles ... */
-
-
-
-
 
 
 .mainHeader1{
@@ -65,16 +83,10 @@ font-size: 24px;
     font-size: 18px;
 }
 
-.nav-container {
-    display: flex;
-    width: 100%;
-    height: 57px;
-    justify-content:space-evenly;
-    align-items: normal;
-    background-color: var(--background-color);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
 
+.nav-bar-list{
+    align-items: normal;
+}
 .nav-link {
     text-decoration: none;
     color: var(--text-color);
