@@ -1,143 +1,182 @@
 :root {
-    --background-color: #fff;
-    --text-color: #121416d8;
-    --link-color: #543fd7;
-  }
-  
-  html[data-theme="light"] {
-    --background-color: rgb(250, 250, 240);
-    --text-color: #121416d8;
-    --link-color: #b0a3ff;
-  
-    .nav-container {
-      position: relative;
-      background-color: rgb(207, 134, 0);
-      width: 135px;
-      height: 600px;
-      justify-content: space-evenly;
-      align-items: normal;
-      background-color: var(--background-color);
-      border: 25px;
-      border-color: #000000;
-    }
-  }
-  
-  html[data-theme="dark"] {
-    --background-color: rgb(59, 94, 78);
-    --text-color: #f7f8f8;
-    --link-color: rgb(207, 134, 0);
-  
-    .nav-container {
-      position: fixed;
-      top: 150;
-      left: 0;
-      width: 135px;
-      height: 400px;
-      z-index: 1000; /* Set a higher z-index to ensure it's above other content */
-      background-color: rgb(207, 134, 0);
-      justify-content: space-evenly;
-      align-items: normal;
-      background-color: var(--background-color);
-    }
-  }
-  
-  body {
-    margin: 0;
-    font-family: "Trebuchet MS", sans-serif;
-    background: var(--background-color);
-    color: var(--text-color);
-    padding: 150px;
-    width: 1300px;
-  }
-  .pageHeader {
+  --background-color: #fff;
+  --text-color: #121416d8;
+  --link-color: #543fd7;
+}
+
+html[data-theme="light"] {
+  --background-color: rgb(255, 210, 255);
+  --text-color: #121416d8;
+  --link-color: #b0a3ff;
+
+ 
+  .nav-container {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 150;
+    left: 0;
+    width: 135px;
+    height: 400px;
     z-index: 1000; /* Set a higher z-index to ensure it's above other content */
-  }
-  .theme-toggle-container {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000; /* Set a higher z-index to ensure it's above other content */
-  }
-  
-  #theme-toggle {
-    /* Your button styles */
-    justify-content: center;
-  }
-  
-  [data-theme="dark"] .theme-icon,
-  [data-theme="light"] .theme-icon {
-    display: block;
-  }
-  
-  .mainHeader1 {
-    text-decoration-line: underline;
+    background-color: rgb(207, 134, 0);
+    justify-content: space-evenly;
     align-items: normal;
-    font-size: 24px;
-    padding-left: 12px;
+    background-color: var(--background-color);
   }
-  
-  .mainHeader2 {
-    font-size: 18px;
+}
+
+html[data-theme="dark"] {
+  --background-color: rgba(17, 0, 0, 0.842);
+  --text-color: #f7f8f8;
+  --link-color: rgba(82, 18, 102, 0.76);
+
+  .nav-container {
+    position: fixed;
+    top: 150;
+    left: 0;
+    width: 135px;
+    height: 400px;
+    z-index: 1000; /* Set a higher z-index to ensure it's above other content */
+    background-color: rgb(207, 134, 0);
+    justify-content: space-evenly;
+    align-items: normal;
+    background-color: var(--background-color);
   }
-  
-  .mainHeader3 {
-    font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 150px;
+  width: 1300px;
+}
+.pageHeader {
+  position: fixed;
+  top: 100px;
+  left: 150px;
+  z-index: 1000; /* Set a higher z-index to ensure it's above other content */
+}
+.theme-toggle-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Set a higher z-index to ensure it's above other content */
+}
+
+#theme-toggle {
+  /* Your button styles */
+  justify-content: center;
+}
+
+[data-theme="dark"] .theme-icon,
+[data-theme="light"] .theme-icon {
+  display: block;
+}
+
+.mainHeader1 {
+  text-decoration-line: underline;
+  align-items: normal;
+  font-size: 24px;
+  padding-left: 12px;
+}
+
+.mainHeader2 {
+  font-size: 18px;
+}
+
+.mainHeader3 {
+   font-size: 18px;
+}
+
+.nav-bar-list{
+ justify-content: center;
+}
+
+.nav-link {
+  color: var(--text-color);
+  width: 40px;
+}
+
+.nav-link:hover {
+  background-color: var(--link-color);
+  color: #ffffffab;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
   }
+
+@media only screen and (max-width: 600px) {
+    body {
+          /* For tablets: */
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+      padding: 100px; /* Adjust padding for smaller screens */
+      width: 100%; /* Make the content width 100% for better responsiveness */
+    }
+    @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+      }
   
-  .nav-bar-list {
-    justify-content: left;
-  }
+    .pageHeader {
+      left: 0;
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
   
-  .nav-link {
-    color: var(--text-color);
-  }
+    .theme-toggle-container {
+      right: 0;
+    }
   
-  .nav-link:hover {
-    background-color: var(--link-color);
-    color: #ffffffab;
-  }
-  
-  /* Media Queries for responsiveness */
-  @media only screen and (max-width: 768px) {
     .nav-container {
-      flex-direction: column;
-      align-items: flex-start;
+      top: 100px;
       height: auto;
+      width: 100%;
+      padding: 10px; /* Adjust padding for smaller screens */
+      box-sizing: border-box;
     }
   
     .nav-link {
       margin-bottom: 10px;
     }
-  
-    .menu-dropdown {
-      display: none;
-      position: absolute;
-      background-color: rgb(255, 255, 255);
-    }
-  
-    .menu:hover .menu-dropdown {
-      display: block;
-    }
   }
-  
-  /* ... DISPLAY BOTH ICONS SEPERATLEY ... */
-  
-  #light-icon {
-    display: inline;
-  }
-  
-  #dark-icon {
-    display: none;
-  }
-  
-  [data-theme="dark"] #light-icon {
-    display: none;
-  }
-  
-  [data-theme="dark"] #dark-icon {
-    display: inline;
-  }
-  
+/* ... DISPLAY BOTH ICONS SEPERATLEY ... */
+
+#light-icon {
+  display: inline;
+}
+
+#dark-icon {
+  display: none;
+}
+
+[data-theme="dark"] #light-icon {
+  display: none;
+}
+
+[data-theme="dark"] #dark-icon {
+  display: inline;
+}
