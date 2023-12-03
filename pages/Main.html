@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <title>Watts Portfolio</title>
-</head>
-
-<body>
+  </head>
+  <body>
+    <!-- Page Header -->
+    <div class="pageHeader">
+      <h1>Home</h1>0
+      <!-- Add any additional elements or information for your header here -->
+    </div>
     <div class="nav-container">
-        <h1 class="mainHeader1">    Sam Watts<br>   Portfolio</h1>
-        <ul class="nav-bar-list">
-            <a href="#" class="nav-link">Home<br> <img src="../pics/homepng.png" alt="Home" width="40" height="40"></a>            
-            <a href="#" class="nav-link">Education<br>  <img src="../pics/schoolpng.png" alt="Home" width="45" height="55"></a>
-            <a href="#" class="nav-link">Passions<br>   <img src="../pics/hockeypng.png" alt="Home" width="40" height="40"></a> 
-            <a href="#" class="nav-link">Personal<br>   <img src="../pics/wifipng.png" alt="Home" width="35" height="30"></a>
-            <a href="#" class="nav-link">Contact<br>   <img src="../pics/emailpng.png" alt="Home" width="35" height="25"></a>
-        </ul>
-</div>
- <!-- Theme toggle button-->
- <div class="theme-toggle-container">
-    <button id="theme-toggle" class="btn btn-link btn-sm ml-2 small" type="button">
-        
+      <h1 class="mainHeader1"> Sam Watts <br> Portfolio </h1>
+      <ul class="nav-bar-list">
+        <a href="#" class="nav-link">Home <br>
+          <img src="../pics/homepng.png" alt="Home" width="40" height="40">
+        </a>
+        <a href="#" class="nav-link">Education <br>
+          <img src="../pics/schoolpng.png" alt="Home" width="45" height="55">
+        </a>
+        <a href="#" class="nav-link">Passions <br>
+          <img src="../pics/hockeypng.png" alt="Home" width="40" height="40">
+        </a>
+        <a href="#" class="nav-link">Personal <br>
+          <img src="../pics/wifipng.png" alt="Home" width="35" height="30">
+        </a>
+        <a href="#" class="nav-link">Contact <br>
+          <img src="../pics/emailpng.png" alt="Home" width="35" height="25">
+        </a>
+      </ul>
+    </div>
+    <!-- Theme toggle button-->
+    <div class="theme-toggle-container">
+      <button id="theme-toggle" class="btn btn-link btn-sm ml-2 small" type="button">
         <!-- Dark theme icon (moon) -->
         <span class="theme-icon d-none d-sm-inline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </span>
-    </button>
-</div>
-</div>   
-</div>
-       
-    <div class="main-container">
-        <!-- Your content goes here -->
-        <div class="title-container">
-      
-            <p class="mainFooter">This page is dedicated to showcasing my general interests, passions, projects, and goals related to school and beginning a new career in tech!
-            </p>
-        </div>
+      </button>
     </div>
-
-
+    </div>
+    </div>
+    <div class="main-container">
+      <!-- Your content goes here -->
+      <div class="main-container">
+        <p class="mainFooter">This page is dedicated to showcasing my general interests, passions, projects, and goals related to school and beginning a new career in tech! </p>
+      </div>
+    </div>
     <script>
-    
-        var toggle = document.getElementById("theme-toggle");
-    
-            var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-            if (storedTheme)
-                document.documentElement.setAttribute('data-theme', storedTheme)
-            
-            
-            toggle.onclick = function() {
-                var currentTheme = document.documentElement.getAttribute("data-theme");
-                var targetTheme = "light";
-            
-                if (currentTheme === "light") {
-                    targetTheme = "dark";
-                }
-            
-                document.documentElement.setAttribute('data-theme', targetTheme)
-                localStorage.setItem('theme', targetTheme);
-            };
+      var toggle = document.getElementById("theme-toggle");
+      var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      if (storedTheme) document.documentElement.setAttribute('data-theme', storedTheme)
+      toggle.onclick = function() {
+        var currentTheme = document.documentElement.getAttribute("data-theme");
+        var targetTheme = "light";
+        if (currentTheme === "light") {
+          targetTheme = "dark";
+        }
+        document.documentElement.setAttribute('data-theme', targetTheme)
+        localStorage.setItem('theme', targetTheme);
+      };
     </script>
-</body>
-
+  </body>
 </html>
