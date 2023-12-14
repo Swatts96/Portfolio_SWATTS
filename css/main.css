@@ -1,15 +1,22 @@
 :root {
-  --background-color: #fff;
+  --background-color: #ffffff;
   --text-color: #121416d8;
   --link-color: #543fd7;
 }
 
 html[data-theme="light"] {
-  --background-color: rgb(255, 210, 255);
+  --background-color: rgb(255, 255, 255);
   --text-color: #121416d8;
   --link-color: #b0a3ff;
 
- 
+  .body-container {
+    /* Your styles go here */
+    background-color: #cabaf8;
+    padding: 20px;
+    width: 80%;
+    
+    /* Add any other styles you need */
+  }
   .nav-container {
     position: fixed;
     top: 150;
@@ -17,18 +24,28 @@ html[data-theme="light"] {
     width: 135px;
     height: 400px;
     z-index: 1000; /* Set a higher z-index to ensure it's above other content */
-    background-color: rgb(207, 134, 0);
+    background-color: rgb(171, 143, 182);
     justify-content: space-evenly;
     align-items: normal;
-    background-color: var(--background-color);
+  
   }
 }
 
+
+
 html[data-theme="dark"] {
-  --background-color: rgba(17, 0, 0, 0.842);
-  --text-color: #f7f8f8;
+  --background-color: rgb(72, 72, 129);
+  --text-color: #ffffff;
   --link-color: rgba(82, 18, 102, 0.76);
 
+  .body-container {
+    /* Your styles go here */
+    background-color: #0e0035;
+    padding: 20px;
+    width: 80%;
+    
+    /* Add any other styles you need */
+  }
   .nav-container {
     position: fixed;
     top: 150;
@@ -36,10 +53,10 @@ html[data-theme="dark"] {
     width: 135px;
     height: 400px;
     z-index: 1000; /* Set a higher z-index to ensure it's above other content */
-    background-color: rgb(207, 134, 0);
+    background-color: #433370;
     justify-content: space-evenly;
     align-items: normal;
-    background-color: var(--background-color);
+
   }
 }
 
