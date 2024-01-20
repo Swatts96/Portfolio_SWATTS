@@ -80,16 +80,17 @@ html[data-theme="dark"] {
   }
   .nav-container {
     position: fixed;
-    top: 150;
-    left: 0;
-    width: 135px;
-    height: 400px;
-    z-index: 1000; /* Set a higher z-index to ensure it's above other content */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    height: 50px; /* Adjust height as needed */
+   
     background-color: #433370;
-    justify-content: space-evenly;
-    align-items: normal;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-evenly; /* Adjust this as per your design */
+    
+}
 
-  }
 }
 
 body {
