@@ -4,31 +4,30 @@
   --link-color: #543fd7;
 }
 
-html[data-theme="light"] {
-  --background-color: rgb(255, 255, 255);
-  --text-color: #121416d8;
-  --link-color: #b0a3ff;
+            html[data-theme="light"] {
+              --background-color: rgb(202, 202, 202);
+              --text-color: #121416d8;
+              --link-color: #b0a3ff;
 
-  .body-container {
-    /* Your styles go here */
-    background-color: #cabaf8;
-    padding: 20px;
-    width: 75%;
-    
-    /* Add any other styles you need */
-  }
-  .nav-container {
-    position: fixed;
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Stretch to the right */
-    height: 50px; /* Adjust height as needed */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-evenly; /* Adjust this as per your design */
-    background-color: rgb(171, 143, 182);
-  
-  }
-}
+              .body-container {
+                background-color: #cabaf8;
+                padding: 20px;
+                width: 75%; /* Set the width of the container */
+                margin: auto; /* This will center the container horizontally */
+                box-sizing: border-box; /* Include padding in the element's total width and height */
+            }
+              .nav-container {
+                position: fixed;
+                top: 0; /* Align to the top */
+                left: 0; /* Align to the left */
+                right: 0; /* Stretch to the right */
+                height: 50px; /* Adjust height as needed */
+                display: flex; /* Use flexbox for alignment */
+                justify-content: space-evenly; /* Adjust this as per your design */
+                background-color: rgb(171, 143, 182);
+              
+              }
+            }
 /* CONTACT BOX */ 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
@@ -64,32 +63,36 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
-html[data-theme="dark"] {
-  --background-color: rgb(72, 72, 129);
-  --text-color: #ffffff;
-  --link-color: rgba(82, 18, 102, 0.76);
+        html[data-theme="dark"] {
+          --background-color: rgb(72, 72, 129);
+          --text-color: #ffffff;
+          --link-color: rgba(82, 18, 102, 0.76);
 
-  .body-container {
-    /* Your styles go here */
-    background-color: #0e0035;
-    padding: 20px;
-    width: 80%;
-    
-    /* Add any other styles you need */
-  }
-  .nav-container {
-    position: fixed;
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Stretch to the right */
-    height: 50px; /* Adjust height as needed */
-    background-color: #433370;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-evenly; /* Adjust this as per your design */
-    
-}
-
-}
+          .body-container {
+            background-color: #cabaf8;
+            padding: 20px;
+            width: 75%; /* Set the width of the container */
+            margin: auto; /* This will center the container horizontally */
+            box-sizing: border-box; /* Include padding in the element's total width and height */
+        }
+          .nav-container {
+            position: fixed;
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            right: 0; /* Stretch to the right */
+            height: 50px; /* Adjust height as needed */
+            background-color: #433370;
+            display: flex; /* Use flexbox for alignment */
+            justify-content: space-evenly; /* Adjust this as per your design */
+            
+        }
+        label[for="subject"],
+          label[for="country"],
+          label[for="lname"],
+          label[for="fname"] {
+            color: #000000; /* Sets text color to black */
+          }
+        }
 
 body {
   margin: 0;
@@ -125,7 +128,7 @@ body {
 .mainHeader1 {
   text-decoration-line: underline;
   align-items: normal;
-  font-size: 24px;
+  font-size: 32px;
   padding-left: 12px;
 }
 
@@ -137,20 +140,23 @@ body {
    font-size: 18px;
 }
 
-.nav-bar-list{
-
-  justify-content: flex;
-
+.nav-bar-list {
+  display: flex; /* This makes the container a flex container */
+  justify-content: center; /* This centers the items horizontally in the container */
+  flex-direction: row; /* This ensures the items are laid out in a row */
+  list-style-type: none; /* Removes bullet points from list items */
+   /* Removes padding */
 }
 
 .nav-link {
-  color: var(--text-color);
-  width: 40px;
+  margin: 0 10px; /* Adds some space between the links */
+  text-decoration: none; /* Removes underline from links */
+  color: var(--text-color); /* Sets the text color */
 }
 
 .nav-link:hover {
-  background-color: var(--link-color);
-  color: #ffffffab;
+  background-color: var(--link-color); /* Adds a background color on hover */
+  background-color: #45a049; /* Changes text color on hover */
 }
 
 /* For mobile phones: */
@@ -158,9 +164,15 @@ body {
     width: 100%;
   }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     body {
           /* For tablets: */
+              .mainHeader1 {
+                font-size: 18px;
+              }
+              .nav-link {
+                font-size: 12px; /* Adjust this font size as needed */
+              }
         .col-s-1 {width: 8.33%;}
         .col-s-2 {width: 16.66%;}
         .col-s-3 {width: 25%;}
@@ -176,6 +188,7 @@ body {
       padding: 100px; /* Adjust padding for smaller screens */
       width: 100%; /* Make the content width 100% for better responsiveness */
     }
+  }
     @media only screen and (min-width: 768px) {
         /* For desktop: */
         .col-1 {width: 8.33%;}
@@ -212,7 +225,6 @@ body {
     .nav-link {
       margin-bottom: 10px;
     }
-  }
 /* ... DISPLAY BOTH ICONS SEPERATLEY ... */
 
 #light-icon {
