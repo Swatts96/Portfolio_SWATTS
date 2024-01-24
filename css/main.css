@@ -13,20 +13,19 @@ html[data-theme="light"] {
     /* Your styles go here */
     background-color: #cabaf8;
     padding: 20px;
-    width: 80%;
+    width: 75%;
     
     /* Add any other styles you need */
   }
   .nav-container {
     position: fixed;
-    top: 150;
-    left: 0;
-    width: 135px;
-    height: 400px;
-    z-index: 1000; /* Set a higher z-index to ensure it's above other content */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    height: 50px; /* Adjust height as needed */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-evenly; /* Adjust this as per your design */
     background-color: rgb(171, 143, 182);
-    justify-content: space-evenly;
-    align-items: normal;
   
   }
 }
@@ -84,7 +83,6 @@ html[data-theme="dark"] {
     left: 0; /* Align to the left */
     right: 0; /* Stretch to the right */
     height: 50px; /* Adjust height as needed */
-   
     background-color: #433370;
     display: flex; /* Use flexbox for alignment */
     justify-content: space-evenly; /* Adjust this as per your design */
@@ -98,11 +96,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--background-color);
   color: var(--text-color);
-  padding: 150px;
-  width: 1300px;
+  padding: 5vw; /* Use viewport width for responsive padding */
+  max-width: 100%; /* Ensure the body doesn't exceed the viewport width */
 }
 .pageHeader {
-  position: fixed;
+  position: flex;
   top: 100px;
   left: 150px;
   z-index: 1000; /* Set a higher z-index to ensure it's above other content */
@@ -140,7 +138,9 @@ body {
 }
 
 .nav-bar-list{
- justify-content: center;
+
+  justify-content: flex;
+
 }
 
 .nav-link {
