@@ -1,30 +1,60 @@
 :root {
   --background-color: #ffffff;
-  --text-color: #121416d8;
+  --text-color: #b0a3ff;
   --link-color: #543fd7;
+}
+
+              html[data-theme="dark"] {
+                --background-color: rgb(72, 72, 129);
+                --text-color: #ffffff;
+                --link-color: rgba(82, 18, 102, 0.76);
+
+                .body-container {
+                  background-color: #8269ce;
+                  padding: 20px;
+                  width: 90%; /* Set the width of the container */
+                  margin: auto; /* This will center the container horizontally */
+                  box-sizing: border-box; /* Include padding in the element's total width and height */
+              }
+                .nav-container {
+                  position: fixed;
+                  top: 0; /* Align to the top */
+                  left: 0; /* Align to the left */
+                  right: 0; /* Stretch to the right */
+                  height: 50px; /* Adjust height as needed */
+                  background-color: #433370;
+                  display: flex; /* Use flexbox for alignment */
+                  justify-content: space-evenly; /* Adjust this as per your design */
+                  
+              }
+              
+label[for="subject"],
+  label[for="country"],
+  label[for="lname"],
+  label[for="fname"] {
+    color: #000000; /* Sets text color to black */
+  }
 }
 
             html[data-theme="light"] {
               --background-color: rgb(202, 202, 202);
-              --text-color: #121416d8;
+              --text-color: #000000d8;
               --link-color: #b0a3ff;
 
               .body-container {
-                background-color: #cabaf8;
+                background-color: #8e7ec0;
                 padding: 20px;
-                width: 75%; /* Set the width of the container */
+                --text-color: #ffffffd8;
+                width: 90%; /* Set the width of the container */
                 margin: auto; /* This will center the container horizontally */
                 box-sizing: border-box; /* Include padding in the element's total width and height */
             }
               .nav-container {
-                position: fixed;
-                top: 0; /* Align to the top */
-                left: 0; /* Align to the left */
-                right: 0; /* Stretch to the right */
+               --text-color: #000000d8;
                 height: 50px; /* Adjust height as needed */
                 display: flex; /* Use flexbox for alignment */
                 justify-content: space-evenly; /* Adjust this as per your design */
-                background-color: rgb(171, 143, 182);
+                background-color: #cabaf8;
               
               }
             }
@@ -53,7 +83,7 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #543fd7;
 }
 
 /* Add a background color and some padding around the form */
@@ -63,36 +93,7 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
-        html[data-theme="dark"] {
-          --background-color: rgb(72, 72, 129);
-          --text-color: #ffffff;
-          --link-color: rgba(82, 18, 102, 0.76);
 
-          .body-container {
-            background-color: #cabaf8;
-            padding: 20px;
-            width: 75%; /* Set the width of the container */
-            margin: auto; /* This will center the container horizontally */
-            box-sizing: border-box; /* Include padding in the element's total width and height */
-        }
-          .nav-container {
-            position: fixed;
-            top: 0; /* Align to the top */
-            left: 0; /* Align to the left */
-            right: 0; /* Stretch to the right */
-            height: 50px; /* Adjust height as needed */
-            background-color: #433370;
-            display: flex; /* Use flexbox for alignment */
-            justify-content: space-evenly; /* Adjust this as per your design */
-            
-        }
-        label[for="subject"],
-          label[for="country"],
-          label[for="lname"],
-          label[for="fname"] {
-            color: #000000; /* Sets text color to black */
-          }
-        }
 
 body {
   margin: 0;
@@ -103,6 +104,8 @@ body {
   max-width: 100%; /* Ensure the body doesn't exceed the viewport width */
 }
 .pageHeader {
+  text-align: center; /* Centers text horizontally */
+  height: 100px; /* Provides some height to the div */
   position: flex;
   top: 100px;
   left: 150px;
@@ -241,4 +244,23 @@ body {
 
 [data-theme="dark"] #dark-icon {
   display: inline;
+}
+
+
+.image-button {
+  display: inline-block; /* Aligns the link like a button */
+  background-color: #f5f5f5; /* Light grey background, change as needed */
+  color: #000; /* Text color */
+  text-decoration: none; /* Removes underline from links */
+  padding: 10px 20px; /* Adds padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2); /* Optional: adds a subtle shadow */
+  margin: 5px; /* Adds some space around the buttons */
+}
+
+.image-button img {
+  vertical-align: middle; /* Aligns the image vertically in the middle */
+  width: 20px; /* Sets the width of the image */
+  height: auto; /* Keeps the aspect ratio of the image */
+  margin-right: 8px; /* Adds a small space between the image and the text */
 }
