@@ -26,7 +26,7 @@ try {
         $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $country = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_STRING);
-        $message = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_STRING);
+        $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 
         // Validate the email format
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
