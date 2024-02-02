@@ -117,6 +117,18 @@ body {
   right: 10px;
   z-index: 1000; /* Set a higher z-index to ensure it's above other content */
 }
+/* Style inputs with type="text", type="email", select elements and textareas */
+input[type=text], input[type=email], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #543fd7; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
 
 #theme-toggle {
   /* Your button styles */
