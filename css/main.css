@@ -119,6 +119,7 @@ body {
 }
 /* Style inputs with type="text", type="email", select elements and textareas */
 input[type=text], input[type=email], select, textarea {
+  
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */
   border: 1px solid #543fd7; /* Gray border */
